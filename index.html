@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rug Pull Survivor: The Redemption Journey</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Base Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    /* Modern Minimalist Style with Epic Animations */
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #1d2b3a;
+      color: #333;
+      line-height: 1.6;
+      padding: 40px 20px;
+      position: relative;
+      overflow-x: hidden;
+    }
+    /* Animated gradient overlay */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: -3;
+      background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+      background-size: 400% 400%;
+      animation: gradientShift 30s ease infinite;
+    }
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Floating circles for epic background animation */
+    .floating-circle {
+      position: fixed;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.1);
+      z-index: -2;
+      animation: floatCircle 20s ease-in-out infinite;
+    }
+    @keyframes floatCircle {
+      0% { transform: translate(0, 0) scale(1); }
+      50% { transform: translate(100vw, 100vh) scale(1.5); }
+      100% { transform: translate(0, 0) scale(1); }
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+      position: relative;
+      z-index: 1;
+    }
+    header, section, footer {
+      background: #fff;
+      padding: 30px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+    header h1 {
+      font-size: 2.8rem;
+      text-align: center;
+      margin-bottom: 10px;
+      color: #102a43;
+      animation: titlePulse 3s infinite alternate;
+    }
+    @keyframes titlePulse {
+      from { transform: scale(1); }
+      to { transform: scale(1.05); }
+    }
+    header p {
+      text-align: center;
+      font-size: 1.2rem;
+      color: #486581;
+    }
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #bcccdc;
+      padding-bottom: 5px;
+      color: #334e68;
+    }
+    p, li {
+      font-size: 1rem;
+      margin-bottom: 10px;
+      color: #334e68;
+    }
+    ul {
+      margin-left: 20px;
+      margin-bottom: 10px;
+      list-style-type: disc;
+    }
+    .button {
+      display: inline-block;
+      background-color: #486581;
+      color: #fff;
+      padding: 15px 30px;
+      border-radius: 5px;
+      text-align: center;
+      cursor: pointer;
+      text-decoration: none;
+      font-weight: 700;
+      margin-top: 15px;
+      font-size: 1.3rem;
+      transition: background-color 0.3s;
+      animation: buttonPulse 2s infinite;
+    }
+    @keyframes buttonPulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+    .button:hover {
+      background-color: #334e68;
+    }
+    textarea {
+      width: 100%;
+      height: 150px;
+      padding: 15px;
+      font-size: 1rem;
+      margin-bottom: 15px;
+      border: 1px solid #bcccdc;
+      border-radius: 5px;
+      resize: vertical;
+      background-color: #f0f4f8;
+      color: #102a43;
+    }
+    .analyzer-result, .nft-link {
+      margin-top: 20px;
+      font-size: 1.1rem;
+      text-align: center;
+      opacity: 0;
+      animation: fadeIn 1s forwards, resultPulse 2s infinite alternate;
+    }
+    @keyframes resultPulse {
+      from { transform: scale(1); }
+      to { transform: scale(1.02); }
+    }
+    .nft-link a {
+      color: #486581;
+      text-decoration: none;
+      font-weight: 700;
+    }
+    .nft-link a:hover {
+      text-decoration: underline;
+    }
+    #storySection {
+      display: none;
+    }
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Floating circles for epic background effect -->
+  <div class="floating-circle" style="width:120px; height:120px; top:20%; left:10%; animation-duration:25s;"></div>
+  <div class="floating-circle" style="width:180px; height:180px; top:50%; left:70%; animation-duration:30s;"></div>
+  <div class="floating-circle" style="width:100px; height:100px; top:70%; left:30%; animation-duration:20s;"></div>
+
+  <main>
+    <header>
+      <h1>Rug Pull Survivor</h1>
+      <p>The Redemption Journey</p>
+    </header>
+
+    <section id="concept">
+      <h2>Concept</h2>
+      <p>A fun and engaging platform where users can share their experiences with rug pulls and meme-worthy losses. Participants earn Rug Pull Survivor NFTs or Pumpfun Badges that unlock exclusive perks.</p>
+    </section>
+
+    <section id="keyFeatures">
+      <h2>Key Features</h2>
+      <ul>
+        <li><strong>Rug Pull Stories:</strong> Share worst experiences anonymously. Top stories win special NFTs.</li>
+        <li><strong>Pumpfun Integration:</strong> Exclusive NFTs, badges, and perks for Pumpfun coin holders.</li>
+        <li><strong>Gamified Engagement:</strong> Redemption Quiz for badges and exclusive content.</li>
+        <li><strong>Survivor's Redemption:</strong> Airdrops, voting rights, raffle entries for NFT perks.</li>
+        <li><strong>Exclusive Community:</strong> Access Telegram/Discord with Pumpfun coin or NFT.</li>
+      </ul>
+    </section>
+
+    <section id="rug-pull-stories">
+      <h2>Rug Pull Stories</h2>
+      <p>Share your most harrowing experiences with rug pulls or failed trades anonymously. Participants receive a limited edition NFT just for sharing their story!</p>
+      <p>If your story ranks in the top 3 (e.g., "Most Relatable," "Most Epic Fail," or "Diamond Hands Survivor"), you can win special NFTs as a prize.</p>
+      <ul>
+        <li>Rankings: Most Relatable, Most Epic Fail, Diamond Hands Survivor</li>
+        <li>Community-voted stories to foster support and shared humor amidst loss</li>
+      </ul>
+      <div class="button" onclick="toggleStorySection()">Share Your Story</div>
+    </section>
+
+    <section id="storySection">
+      <h2>Share Your Story</h2>
+      <textarea id="storyInput" placeholder="Write your rug pull story here..."></textarea>
+      <div>
+        <div class="button" onclick="submitStory()">Submit Story</div>
+      </div>
+      <div class="analyzer-result" id="analyzerResult"></div>
+      <div class="nft-link" id="nftLink" style="display: none;">
+        <p>Proceed to NFT Generator:</p>
+        <a href="#" target="_blank">NFT Generator Link</a>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Rug Pull Survivor. All rights reserved.</p>
+    </footer>
+  </main>
+
+  <script>
+    function toggleStorySection() {
+      var storySection = document.getElementById('storySection');
+      if (storySection.style.display === 'none' || storySection.style.display === '') {
+        storySection.style.display = 'block';
+        document.getElementById('analyzerResult').textContent = '';
+        document.getElementById('nftLink').style.display = 'none';
+        window.scrollTo({ top: storySection.offsetTop, behavior: 'smooth' });
+      } else {
+        storySection.style.display = 'none';
+      }
+    }
+
+    function submitStory() {
+      const story = document.getElementById('storyInput').value.trim();
+      if (story === "") {
+        alert("Please write your story before submitting.");
+        return;
+      }
+
+      const rankings = [
+        "Most Relatable",
+        "Most Epic Fail",
+        "Diamond Hands Survivor"
+      ];
+      const randomRank = rankings[Math.floor(Math.random() * rankings.length)];
+
+      const analyzerResult = document.getElementById('analyzerResult');
+      analyzerResult.textContent = "Your story ranking: " + randomRank;
+      analyzerResult.style.animation = 'fadeIn 1s forwards, resultPulse 2s infinite alternate';
+
+      const nftLink = document.getElementById('nftLink');
+      nftLink.style.display = 'block';
+      nftLink.style.animation = 'fadeIn 1s forwards';
+
+      document.getElementById('storyInput').value = "";
+    }
+  </script>
+</body>
+</html>
